@@ -1,0 +1,26 @@
+#TITLE: Emacs Cheatsheet
+
+TODO: Should I include org in the same file?
+
+* Windows
+- C-x 0 - delete window
+- C-x 2 - split horizontally
+- C-x 3 - split vertically
+- C-x + - balance windows
+
+** Evil Variants
+- C-w C-c - close the current window
+- C-w C-o - close all other windows
+- C-w C-s - split horizontally
+- C-w C-v - split vertically
+- C-w | - use numeric prefix to set window width
+- C-w _ - use numeric prefix to set the window height
+
+** Movement Evil mode
+- SPC w C-{h, j, k, l}
+  + move cursor between windows
+- SPC w C-{H, J, K, L}
+  + move window
+* File Management
+- SPC f P
+  + find and open file
