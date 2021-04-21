@@ -1,0 +1,11 @@
+#+TITLE:  Vim Cheatsheet
+
+* Insert Mode :insert:
+** Edit Text
+The backspace key works as you would expect. However, these chords might be quicker.
+
+| Keystrokes | Effect                                |
+|------------+---------------------------------------|
+| <C-h>      | Delete back one character (backspace) |
+| <C-w>      | Delete back one word                  |
+| <C-u>      | Delete back to the start of the line  |
