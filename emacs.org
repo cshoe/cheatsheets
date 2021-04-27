@@ -1,21 +1,24 @@
-#TITLE: Emacs Cheatsheet
-
-TODO: Should I include org in the same file?
+#+TITLE: Emacs Cheatsheet
+#+DESCRIPTION: Emacs and org-mode cheatsheet
+#+AUTHOR: Chris Schomaker
 
 * Windows
-- C-x 0 - delete window
-- C-x 2 - split horizontally
-- C-x 3 - split vertically
-- C-x + - balance windows
-
-** Evil Variants
-- C-w C-c - close the current window
-- C-w C-o - close all other windows
-- C-w C-s - split horizontally
-- C-w C-v - split vertically
-- C-w | - use numeric prefix to set window width
-- C-w _ - use numeric prefix to set the window height
-
+** Splits
+| Keystrokes | Effect             |
+|------------+--------------------|
+| C-x 0      | delete window      |
+| C-x 2      | split horizontally |
+| C-x 3      | split vertically   |
+| C-x +      | balance windows    |
+*** Evil Variants
+| Keystrokes | Effect                                  |
+|------------+-----------------------------------------|
+| C-w C-c    | Close the current window                |
+| C-w C-o    | Close all the other windows             |
+| C-w C-s    | Split horizontally                      |
+| C-w C-v    | Split vertically                        |
+| C-w \vert  | Use numeric prefix to set window width  |
+| C-w _      | Use numeric prefix to set window height |
 ** Movement Evil mode
 - SPC w C-{h, j, k, l}
   + move cursor between windows
@@ -24,3 +27,23 @@ TODO: Should I include org in the same file?
 * File Management
 - SPC f P
   + find and open file
+* Lists
+- M-RET (normal mode)
+  + Add new item to list
+** [[https://orgmode.org/manual/Checkboxes.html#Checkboxes][Checkboxes]]
+- M-S-RET (normal mode)
+  + add a checkbox item to the list
+- C-c C-c
+  + toggle state
+- To show progress of a list of checkboxes, include =[/]= or =[%]= in the parent item
+* Org Mode
+** [[https://orgmode.org/manual/Structure-Editing.html][Structure Editing]]
+*** Subtree moving
+| Command               | Shortcut  | Evil Variant | Effect                                   |
+|-----------------------+-----------+--------------+------------------------------------------|
+| org-do-promote        | M-LEFT    |              | promote the current heading by one level |
+| org-do-demote         | M-RIGHT   |              | demote the current heading by one level  |
+| org-promote-subtree   | M-S-LEFT  | M-SPC m s h  | promote the current subtree by one level |
+| org-demote-subtree    | M-S-RIGHT | M-SPC m s l  | demote the current subtree by one level  |
+| org-move-subtree-up   | M-UP      | M-SPC m s k  | Move subtree up                          |
+| org-move-subtree-down | M-DOWN    | M-SPC m s j  | Move subtree down                        |
