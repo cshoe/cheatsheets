@@ -9,3 +9,5 @@ The backspace key works as you would expect. However, these chords might be quic
 | <C-h>      | Delete back one character (backspace) |
 | <C-w>      | Delete back one word                  |
 | <C-u>      | Delete back to the start of the line  |
+
+* Quickfix

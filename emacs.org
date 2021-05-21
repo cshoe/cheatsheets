@@ -47,3 +47,49 @@
 | org-demote-subtree    | M-S-RIGHT | M-SPC m s l  | demote the current subtree by one level  |
 | org-move-subtree-up   | M-UP      | M-SPC m s k  | Move subtree up                          |
 | org-move-subtree-down | M-DOWN    | M-SPC m s j  | Move subtree down                        |
+** [[https://orgmode.org/manual/Refile-and-Copy.html][Refile and Copy]]
+Instead of trying to copy and paste text around, these commands can be used to move entries within a file or between files.
+*** org-refile
+- =C-c C-w=
+Refile the current entry or region
+*** org-refile-copy
+- =C-c M-w=
+Works just like =org-refile= but the original note is not deleted.
+*** Other Shortcuts
+- =C-u C-c C-w=
+  Use the refile interface to jump to a heading
+- =C-u C-u C-c C-w=
+  Jump to the location where org-refile last moved a tree to
+** Folding
+- S-Tab
+  + cycle through folding options -- OVERVIEW, CONTENTS, SHOWALL
+- [[https://orgmode.org/manual/Initial-visibility.html][Initial Visibility]]
+  + Set the level of visibility when the file first opens. This defaults to =showeverything=.
+** [[https://orgmode.org/manual/Timestamps.html#Timestamps][Timestamps]]
+A timestamp can appear anywhere in the headline or body of an Org tree entry.
+- Plain Timestamp
+  + used for events or appointments
+  + Example: <2006-11-01 Wed 19:15>
+- Timestamp with repeater interval
+  + Example: <2007-05-16 Wed 12:30 +1w>
+- Time/Date range
+  + Two timestamps connected by '--' denote a range.
+  + Example: <2004-08-23 Mon>--<2004-08-26 Thu>
+- Inactive Timestamp
+  + Like a plain timestamp but they do not trigger an entry to show up in the agenda.
+  + Example: [2006-11-01 Wed]
+*** Creating Timestamps
+- =C-c .=
+  + Prompt for a date and insert a timestampt.
+- =C-c !=
+  + Insert an inactive timestamp
+- =S-LEFT= or =S-RIGHT=
+  + Change the date at point by one day
+- =S-UP= or =S-DOWN=
+  + If on the opening or closing brackets of the timestamp, change the type
+  + Within the timestamp, change the item under the point
+*** Deadlines and Scheduling
+- =C-c C-d=
+  + Insert DEADLINE along with a timestamp
+- =C-c C-s=
+  + Insert SCHEDULED with a timestamp

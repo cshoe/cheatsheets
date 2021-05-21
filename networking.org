@@ -1,0 +1,29 @@
+#+TITLE: Networking
+
+* Connection Introspection
+** netstat
+- =apt-get update && apt-get -y install net-tools=
+*** Output
+| Proto | Recv-Q | Send-Q | Local Address | Foreign Address | State |
+- Proto
+  + Protocol of the connection
+- Recv-Q
+  + receive queue of bytes received or ready to be received
+    - In other words, the count of bytes not copied by the user program connected to this socket
+- Send-Q
+  + Send queue of bytes ready to be sent
+    - In other words, the count of bytes not acknowledged by the remote host
+- Local address
+  + Address details and port of the local connection. An * in the host indicates that the server is listening and if a port is not yet established.
+- State
+  + State of the local socket -- usually ESTABLISHED, LISTENING, CLOSED or blank.
+*** Options
+- =-t=
+  + List only TCP connections
+- =-u=
+  + List only UDP connections
+- =-l=
+  + list  only listening TCP ports
+*** Examples
+- =netstat -tn | grep -i ":1000" | awk 'NR>1 {split($4,a,":"); print a[2]}' | sort | uniq -c=
+  + get all TCP connections connected to a local port of :1000, sort and count them
