@@ -11,3 +11,14 @@ The backspace key works as you would expect. However, these chords might be quic
 | <C-u>      | Delete back to the start of the line  |
 
 * Quickfix
+
+* Marks
+| Command     | Description                                                     |
+| =ma=        | set mark `a` at cursor location                                 |
+| =`a=        | Jump to the line of mark `a` (first non-blank charater in line) |
+| =d'a=       | delete from current line to the line of mark `a`                |
+| =d`a=       | delete from the current position to position of mark `a`        |
+| =c'a=       | chanage text from current line to line of mark `a`              |
+| =y`a=       | yank text to unnamed buffer from cursor to position of mark `a` |
+| =:marks=    | List all the current marks                                      |
+| =:marks aB= | list marks `a`, `B`                                             |
